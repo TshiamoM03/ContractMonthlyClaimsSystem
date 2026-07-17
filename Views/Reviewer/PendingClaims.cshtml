@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ContractMonthlyClaimsSystem.Models.Claim>
+
+<div class="text-center">
+    <h1 class="display-3 text-dark"><strong>Pending Claims For Review</strong></h1><br />
+</div>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+    @*no pending found/ an error occured(from review)/ claim not found(from review)*@
+}
+else if(TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+    @*reviewed successfully*@
+}
+
+<div class="mx-auto" style="width: 750px;">
+    <div class="container">
+        <div class="p-4">
+            <br />
+            <table class="table table-hover text-dark">
+                <thead>
+                    <tr>
+                        <th>Claim Number</th>
+                        <th>Lecturer</th>
+                        <th>Submission Date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                   @foreach(var claim in Model)
+                   {
+                        <tr>
+                            <td>@claim.ClaimId</td>
+                            <td>@claim.Lecturer.Name</td>
+                            <td>@claim.SubmissionDate.ToString("dd-MMM-yyyy")</td>
+                            <td>
+                                <a asp-controller="Reviewer" asp-action="Review" asp-route-claimId="@claim.ClaimId" class="btn btn-primary">Review Claim</a>
+                            </td>
+                        </tr>
+                   }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

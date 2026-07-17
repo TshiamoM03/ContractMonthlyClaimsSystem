@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ContractMonthlyClaimsSystem.Models.Claim>
+
+<div class="text-center">
+    <h1 class="display-3 text-dark"><strong>Payment History</strong></h1><br />
+</div>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+
+<div class="mx-auto" style="width: 850px;">
+    <div class="container">
+        <div class="pt-4 ">
+            @foreach (var claim in Model)
+            {
+                //calculations
+                var grossPay = claim.HoursWorked * claim.HourlyRate;
+                var deductions = grossPay * 0.10; // 10% deductions
+                var netPay = grossPay - deductions;
+
+                <div class="card mb-3" style="width: 800px;">
+
+                    <div class="card-header bg-secondary text-white">
+                        <i class="bi bi-receipt"></i>
+                        <span class="h6">Issue to: @claim.Lecturer.Name</span>
+                    </div>
+
+                    <div class="card-body">
+                        <table class="table text-dark">
+                            <thead>
+                                <tr>
+                                    <th>Payment Period</th>
+                                    <th>Hours Worked</th>
+                                    <th>Hourly Rate</th>
+                                    <th>Gross Pay</th>
+                                    <th>Deductions (10%)</th>
+                                    <th>Net Pay:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@claim.SubmissionDate.ToString("MMMM yyyy")</td>
+                                    <td>@claim.HoursWorked</td>
+                                    <td>R @claim.HourlyRate.00</td>
+                                    <td>R @grossPay.00</td>
+                                    <td>R @deductions.00</td>
+                                    <td>R @netPay.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> @*end of card body*@
+                </div> @*card end*@
+            }
+        </div>
+    </div>
+</div>
+

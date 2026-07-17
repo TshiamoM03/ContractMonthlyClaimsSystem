@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ContractMonthlyClaimsSystem.Models.Claim>
+<div class="text-center">
+    <h1 class="display-3 text-dark"><strong>My Claims</strong></h1><br />
+</div>
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+<div class="mx-auto" style="width: 950px;">
+    <div class="container">
+        <form asp-controller="Lecturer" asp-action="TrackClaim" method="post" class="p-4">
+            <div class="form-group">
+                <label for="email" class="form-label">Enter your email address to view your claims</label>
+                <input type="email" class="form-control" name="Email" required />
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">View Claims</button>
+        </form>
+    </div><br />
+
+    <div class="container">
+        <div class="p-4">
+            <br />
+            <table class="table table-hover text-dark">
+                <thead>
+                    <tr>
+                        <th>Submission Date</th>
+                        <th>Hours Worked</th>
+                        <th>Hourly Rate</th>
+                        <th>Claim Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        foreach (var claim in Model)
+                        {
+                            //determine text colour class based on claim status value
+                            string statusClass = claim.Status switch
+                            {
+                                "Pending" => "text-primary",
+                                "Approved" => "text-success",
+                                "Rejected" => "text-danger",
+                                _ => ""
+                            };
+                            <tr>
+                                <td>@claim.SubmissionDate.ToString("dd-MMM-yyyy")</td>
+                                <td>@claim.HoursWorked hours</td>
+                                <td>R @claim.HourlyRate.00/hour</td>
+                                <td>R @claim.ClaimAmount.00</td>
+                                <td class="@statusClass">@claim.Status</td>
+                            </tr>
+                        }//endfor
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

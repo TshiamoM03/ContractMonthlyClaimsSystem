@@ -1,0 +1,142 @@
+﻿@model ContractMonthlyClaimsSystem.Models.Claim
+
+<div class="text-center">
+    <h1 class="display-3 text-dark"><strong>Review Claim</strong></h1><br />
+</div>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+@{
+    //to assist in claim verification to ensure required documents are present by checking document contents by name
+    bool hasTimesheet = false;
+    bool hasContract = false;
+
+    foreach (var doc in Model.SupportingDocumentList)
+    {
+        if (doc.FileName.Contains("timesheet", StringComparison.OrdinalIgnoreCase))
+        {
+            hasTimesheet = true;
+        }
+
+        if (doc.FileName.Contains("contract", StringComparison.OrdinalIgnoreCase))
+        {
+            hasContract = true;
+        }
+
+        if (hasTimesheet && hasContract)
+        {
+            break;
+        }
+    }
+    bool hasRequiredDocs = hasTimesheet && hasContract;
+}
+
+
+<div class="mx-auto" style="width: 1000px;">
+    <div class="row">
+        <div class="col-7">
+            <div class="container">
+                <div class="pt-4"><h4 class="text-dark">Claim Details</h4><hr /></div>
+
+                <div class="row m-1">
+                    <div class="col-sm-4"><p class="text-dark"><strong>Lecturer:</strong></p></div>
+                    <div class="col-sm-8"><p class="text-dark">@Model.Lecturer.Name</p></div>
+                </div>
+
+                <div class="row m-1">
+                    <div class="col-sm-4"><p class="text-dark"><strong>Date Submitted:</strong></p></div>
+                    <div class="col-sm-8"><p class="text-dark">@Model.SubmissionDate.ToString("dd-MMM-yyyy")</p></div>
+                </div>
+
+                <div class="row m-1">
+                    <div class="col-sm-4"><p class="text-dark"><strong>Hours Worked:</strong></p></div>
+                    <div class="col-sm-8"><p class="text-dark">@Model.HoursWorked hours</p></div>
+                </div>
+
+                <div class="row m-1">
+                    <div class="col-sm-4"><p class="text-dark"><strong>Rate:</strong></p></div>
+                    <div class="col-sm-8"><p class="text-dark">R @Model.HourlyRate.00/hour</p></div>
+                </div>
+
+                <div class="row m-1">
+                    <div class="col-sm-4"><p class="text-dark"><strong>Claim Amount:</strong></p></div>
+                    <div class="col-sm-8"><p class="text-dark">R @Model.ClaimAmount.00</p></div>
+                </div>
+
+                <div class="row m-1">
+                    <div class="col-sm-4"><p class="text-dark"><strong>Additional Notes:</strong></p></div>
+                    <div class="col-sm-8"><p class="text-dark">@Model.Notes</p></div>
+                </div>              
+            </div>
+            <div class="row">
+                <div class="col-sm-9">
+
+                    <form asp-controller="Reviewer" asp-action="Review" asp-route-claimId="@Model.ClaimId" method="post">
+
+                        <label for="email" class="form-label">Enter your email address</label>
+                        <input type="email" class="form-control" name="Email" required /><br />
+
+                        <div class="mb-2">
+                            <label for="reason" class="form-label">Reason</label>
+                            <input type="text" for="Reason" class="form-control" name="Reason" />
+                        </div>
+                        <button type="submit" name="decision" value="Approved" class="btn btn-success">Approve</button>
+                        <button type="submit" name="decision" value="Rejected" class="btn btn-danger">Reject</button>
+                    </form>
+                </div>
+                <div class="col-sm-3">
+                    <br />
+                    <a asp-controller="Reviewer" asp-action="PendingClaims" class="btn btn-secondary">Back To List</a>
+                </div>
+            </div>
+            
+        </div>
+        @*Supporting documents list*@
+        <div class="col-5">
+            <div class="container">
+                <div class="pt-4"><h4 class="text-dark">Supporting Documents</h4><hr /></div>
+                <div class="row m-3">
+                @if(Model != null && Model.SupportingDocumentList != null && Model.SupportingDocumentList.Any())
+                {
+                    @if (!hasRequiredDocs)
+                    {
+                        <div class="text-info pb-3">
+                            <i class="bi bi-exclamation-triangle-fill"></i>
+                            <span>
+                                <strong>Suggestion:</strong>
+                                Reject claim, "timesheet" or "contract" missing from supporting documents.
+                            </span>
+                        </div>
+                    }//endif
+                    @foreach (var doc in Model.SupportingDocumentList)
+                    {
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <i class="fs-4 bi bi-file-earmark-text-fill text-info"></i> <span class="text-info d-sm-inline">@doc.FileName</span>
+                                    <a asp-controller="Reviewer" asp-action="DownloadDocument" asp-route-supportingDocumentId="@doc.SupportingDocumentId" class="btn btn-secondary">Open</a>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    } //endfor                   
+                else
+                {
+                    <div class="text-info pb-3">
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                        <span>
+                            <strong>Suggestion:</strong>
+                            Rejected claim, supporting documents absent.
+                        </span>
+                    </div>
+                }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

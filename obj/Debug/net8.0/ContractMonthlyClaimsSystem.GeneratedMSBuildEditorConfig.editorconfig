@@ -1,0 +1,103 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ContractMonthlyClaimsSystem
+build_property.RootNamespace = ContractMonthlyClaimsSystem
+build_property.ProjectDir = C:\Users\Tshiamo\OneDrive\Documents\BCAD2 2024\Semester2\Programming 2B\ContractMonthlyClaimsSystem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Tshiamo\OneDrive\Documents\BCAD2 2024\Semester2\Programming 2B\ContractMonthlyClaimsSystem
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/HR/AddLecturer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcQWRkTGVjdHVyZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/HR/AllLecturers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcQWxsTGVjdHVyZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/HR/ClaimReports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcQ2xhaW1SZXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/HR/EditLecturer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcRWRpdExlY3R1cmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/HR/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/HR/Payroll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcUGF5cm9sbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Lecturer/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Lecturer/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Lecturer/SubmitClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcU3VibWl0Q2xhaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Lecturer/TrackClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcVHJhY2tDbGFpbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Lecturer/UploadDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcVXBsb2FkRG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Reviewer/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3ZXJcSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Reviewer/PendingClaims.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3ZXJcUGVuZGluZ0NsYWltcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Reviewer/Review.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3ZXJcUmV2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tshiamo/OneDrive/Documents/BCAD2 2024/Semester2/Programming 2B/ContractMonthlyClaimsSystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-f8sga4joyq

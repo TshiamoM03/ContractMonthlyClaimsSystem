@@ -1,0 +1,128 @@
+﻿@model IEnumerable<ContractMonthlyClaimsSystem.Models.Claim>
+
+<div class="text-center">
+    <h1 class="display-3 text-dark"><strong>All Processed Claims</strong></h1><br />
+</div>
+
+@if(TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<div class="mx-auto" style="width: 750px;">
+    <div class="container">
+        <div class="p-4">
+            <table class="table table-hover text-dark">
+                <thead>
+                    <tr>
+                        <th>Lecturer</th>
+                        <th>Date of Review</th>
+                        <th>Status</th>
+                        <th>Claim Amount</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                 <tbody>
+                     @foreach(var claim in Model)
+                    {
+                        string statusClass = claim.Status switch
+                        {
+                            "Approved" => "text-success",
+                            "Rejected" => "text-danger",
+                            _ => ""
+                        };
+                        <tr>
+                            <td>@claim.Lecturer.Name</td>
+                            <td>@claim.ClaimReview.ReviewDate.ToString("dd-MMM-yyyy")</td>
+                            <td class="@statusClass">@claim.Status</td>
+                            <td>R @claim.ClaimAmount.00</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#claimDetails-@claim.ClaimId">Details</button>
+                            </td>
+                        </tr>
+
+                        @*Modal to display details of claim, and review*@
+                        <div class="modal fade" id="claimDetails-@claim.ClaimId" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h3 class="modal-title text-dark">Details of Finalised Claim</h3>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+
+                                        @if (claim.Status == "Approved")
+                                        {
+                                            <i class="bi bi-check-circle-fill text-success"></i>
+                                            <span class="text-success"><strong>@claim.Status</strong></span>
+                                        }
+                                        else if (claim.Status == "Rejected")
+                                        {
+                                            <i class="bi bi-x-circle-fill text-danger"></i>
+                                            <span class="text-danger"><strong>@claim.Status</strong></span>
+                                        } <br /><br />
+
+                                        <div class="row">
+                                            <div class="col-sm-7">
+                                                <p class="text-dark"><strong>Reviewed By</strong> @claim.ClaimReview.Reviewer.Name (@claim.ClaimReview.Reviewer.Role)</p>
+                                                <p class="text-dark"><strong>Reviewed On:</strong> @claim.ClaimReview.ReviewDate.ToString("dd-MMM-yyyy")</p>
+                                                <p class="text-dark"><strong>Comment:</strong> @claim.ClaimReview.Reason</p> 
+                                                <hr />
+                                                <div class="row m-1">
+                                                    <div class="col-sm-5"><p class="text-dark"><strong>Lecturer:</strong></p></div>
+                                                    <div class="col-sm-7"><p class="text-dark">@claim.Lecturer.Name</p></div>
+                                                </div>
+
+                                                <div class="row m-1">
+                                                    <div class="col-sm-5"><p class="text-dark"><strong>Date Submitted:</strong></p></div>
+                                                    <div class="col-sm-7"><p class="text-dark">@claim.SubmissionDate.ToString("dd-MMM-yyyy")</p></div>
+                                                </div>
+
+                                                <div class="row m-1">
+                                                    <div class="col-sm-5"><p class="text-dark"><strong>Hours Worked:</strong></p></div>
+                                                    <div class="col-sm-7"><p class="text-dark">@claim.HoursWorked hours</p></div>
+                                                </div>
+                                                <div class="row m-1">
+                                                    <div class="col-sm-5"><p class="text-dark"><strong>Rate:</strong></p></div>
+                                                    <div class="col-sm-7"><p class="text-dark">R @claim.HourlyRate.00 /hour</p></div>
+                                                </div>
+
+                                                <div class="row m-1">
+                                                    <div class="col-sm-5"><p class="text-dark"><strong>Claim Amount:</strong></p></div>
+                                                    <div class="col-sm-7"><p class="text-dark">R @claim.ClaimAmount.00</p></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+
+                                                @if (Model != null && claim.SupportingDocumentList != null && claim.SupportingDocumentList.Any())
+                                                {
+                                                    foreach (var doc in claim.SupportingDocumentList)
+                                                    {
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <i class="fs-4 bi bi-file-earmark-text-fill text-info"></i> <span class="text-info d-sm-inline">@doc.FileName</span>
+                                                                <a asp-controller="Reviewer" asp-action="DownloadDocument" asp-route-supportingDocumentId="@doc.SupportingDocumentId" class="btn btn-secondary">Open</a>
+                                                            </div>
+                                                        </div> <br />
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <p class="text-info">No documents to view</p>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

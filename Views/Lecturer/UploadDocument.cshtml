@@ -1,0 +1,31 @@
+﻿<div class="text-center">
+    <h1 class="display-3 text-dark"><strong>Upload Supporting Documents</strong></h1><br />
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+else if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<div class="mx-auto" style="width: 700px;">
+    <div class="container">
+        <form asp-controller="Lecturer" asp-action="UploadDocument" method="post" class="p-4" enctype="multipart/form-data">
+            <div class="mb-4">
+                <input type="hidden" name="claimId" value="@ViewBag.ClaimId" />
+                <label for="file" class="form-label">Upload all the relevant supporting documents</label>
+                <input type="file" name="file" class="form-control" multiple />
+                <small class="form-text text-muted">Accepted document types: .pdf, .docx, .xlsx</small>
+                <small class="form-text text-muted">File must not exceed 2GB</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+</div>

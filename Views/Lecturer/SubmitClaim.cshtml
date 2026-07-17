@@ -1,0 +1,41 @@
+﻿@model ContractMonthlyClaimsSystem.Models.Claim
+
+<div class="text-center">
+    <h1 class="display-3 text-dark"><strong>Submit A New Claim</strong></h1><br />
+</div>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<div class="mx-auto" style="width: 700px;">
+    <div class="container">
+        <form asp-controller="Lecturer" asp-action="SubmitClaim" method="post" class="p-4">
+            <div class="mb-4">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="Email" required />
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="HoursWorked" class="form-label">Hours Worked</label>
+                <input type="number" asp-for="HoursWorked" class="form-control" />
+                <span asp-validation-for="HoursWorked" class="text-danger"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="HourlyRate" class="form-label">Hourly Rate</label>
+                <input type="number" asp-for="HourlyRate" class="form-control" />
+                <span asp-validation-for="HourlyRate" class="text-danger"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="Notes" class="form-label" rows="4">Notes (optional)</label>
+                <textarea asp-for="Notes" class="form-control" name="Notes"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

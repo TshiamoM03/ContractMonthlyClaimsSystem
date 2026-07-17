@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E4EEC119-DE55-4AF0-AD21-B0A0475BCF7F}|ContractMonthlyClaimsSystem.csproj|c:\\users\\tshiamo\\onedrive\\documents\\bcad2 2024\\semester2\\programming 2b\\contractmonthlyclaimssystem\\views\\hr\\payroll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4EEC119-DE55-4AF0-AD21-B0A0475BCF7F}|ContractMonthlyClaimsSystem.csproj|solutionrelative:views\\hr\\payroll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4EEC119-DE55-4AF0-AD21-B0A0475BCF7F}|ContractMonthlyClaimsSystem.csproj|c:\\users\\tshiamo\\onedrive\\documents\\bcad2 2024\\semester2\\programming 2b\\contractmonthlyclaimssystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4EEC119-DE55-4AF0-AD21-B0A0475BCF7F}|ContractMonthlyClaimsSystem.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4EEC119-DE55-4AF0-AD21-B0A0475BCF7F}|ContractMonthlyClaimsSystem.csproj|c:\\users\\tshiamo\\onedrive\\documents\\bcad2 2024\\semester2\\programming 2b\\contractmonthlyclaimssystem\\views\\reviewer\\pendingclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4EEC119-DE55-4AF0-AD21-B0A0475BCF7F}|ContractMonthlyClaimsSystem.csproj|solutionrelative:views\\reviewer\\pendingclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4EEC119-DE55-4AF0-AD21-B0A0475BCF7F}|ContractMonthlyClaimsSystem.csproj|c:\\users\\tshiamo\\onedrive\\documents\\bcad2 2024\\semester2\\programming 2b\\contractmonthlyclaimssystem\\controllers\\hrcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4EEC119-DE55-4AF0-AD21-B0A0475BCF7F}|ContractMonthlyClaimsSystem.csproj|solutionrelative:controllers\\hrcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4EEC119-DE55-4AF0-AD21-B0A0475BCF7F}|ContractMonthlyClaimsSystem.csproj|c:\\users\\tshiamo\\onedrive\\documents\\bcad2 2024\\semester2\\programming 2b\\contractmonthlyclaimssystem\\models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4EEC119-DE55-4AF0-AD21-B0A0475BCF7F}|ContractMonthlyClaimsSystem.csproj|solutionrelative:models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4EEC119-DE55-4AF0-AD21-B0A0475BCF7F}|ContractMonthlyClaimsSystem.csproj|c:\\users\\tshiamo\\onedrive\\documents\\bcad2 2024\\semester2\\programming 2b\\contractmonthlyclaimssystem\\views\\hr\\claimreports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4EEC119-DE55-4AF0-AD21-B0A0475BCF7F}|ContractMonthlyClaimsSystem.csproj|solutionrelative:views\\hr\\claimreports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAowGEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T18:36:03.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Payroll.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\Views\\HR\\Payroll.cshtml",
+              "RelativeDocumentMoniker": "Views\\HR\\Payroll.cshtml",
+              "ToolTip": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\Views\\HR\\Payroll.cshtml",
+              "RelativeToolTip": "Views\\HR\\Payroll.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T20:46:30.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClaimReports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\Views\\HR\\ClaimReports.cshtml",
+              "RelativeDocumentMoniker": "Views\\HR\\ClaimReports.cshtml",
+              "ToolTip": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\Views\\HR\\ClaimReports.cshtml",
+              "RelativeToolTip": "Views\\HR\\ClaimReports.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAGEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T18:03:49.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Claim.cs",
+              "DocumentMoniker": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\Models\\Claim.cs",
+              "RelativeDocumentMoniker": "Models\\Claim.cs",
+              "ToolTip": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\Models\\Claim.cs",
+              "RelativeToolTip": "Models\\Claim.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA5wBYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T17:19:17.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HrController.cs",
+              "DocumentMoniker": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\Controllers\\HrController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HrController.cs",
+              "ToolTip": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\Controllers\\HrController.cs",
+              "RelativeToolTip": "Controllers\\HrController.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAqwJgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T20:26:06.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PendingClaims.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\Views\\Reviewer\\PendingClaims.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reviewer\\PendingClaims.cshtml",
+              "ToolTip": "C:\\Users\\Tshiamo\\OneDrive\\Documents\\BCAD2 2024\\Semester2\\Programming 2B\\ContractMonthlyClaimsSystem\\Views\\Reviewer\\PendingClaims.cshtml",
+              "RelativeToolTip": "Views\\Reviewer\\PendingClaims.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T20:54:06.489Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
